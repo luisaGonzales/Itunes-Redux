@@ -14,15 +14,35 @@ const Head = ({title}) => {
   );
 }
 
-const Song = ({}) => {
-  return(
-    <Row></Row>
+const SongList = ({playlist}) => {
+  return (
+    playlist.map((song, index) => {
+      return(
+        <Song title={song.title} artist={song.artist} duration={song.duration} />
+      );
+    })
+  );
+}
+
+
+const Song = ({title, artist, duration}) => {
+  return (
+    <Row>
+      <Col mdOffset={2} md={6}>
+        {title} - {artist} 
+      </Col>
+      <Col md={2}>
+        {duration}
+      </Col>
+    </Row>
   );
 }
 
 const Buttons = ({}) => {
   return(
-    <Row></Row>
+    <Row>
+      
+    </Row>
   );
 }
 
@@ -31,6 +51,7 @@ const App = ({playlist, actualSong, play}) =>  {
   return (
     <Grid>
       <Head title="TreeItunes"/>
+      <SongList playlist={playlist}/>
     </Grid>
   );
 }
