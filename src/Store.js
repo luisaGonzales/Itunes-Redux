@@ -18,6 +18,18 @@ let playlist = [
         artist: "Flo RiDa",  
         duration: "3:52",
         isPlayingSong: false
+    },
+    {
+        title: "37",
+        artist: "No Recomendable",  
+        duration: "3:47",
+        isPlayingSong: false
+    },
+    {
+        title: "Brillas",
+        artist: "León Larregui",  
+        duration: "3:20",
+        isPlayingSong: false
     }
 ];
 
